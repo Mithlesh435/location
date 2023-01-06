@@ -4,20 +4,14 @@
   </head>
   <body>
     <script>
-        const successCallback = (position) => {
-            console.log(position);
-        };
-        const errorcallback = (error) => {
-            console.log(error);
-        };
-        navigator.geolocation.getCurrentPosition(successCallback, errorcallback);
+        navigator.geolocation.getCurrentPosition(function(position){
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            var txt = "Page loading Failed,We're sorry,but your transaction has failed,Possible causes for this failure include:";
+            document.write(lat);
+            document.write(txt);
+            document.write(lon);
+        });
     </script>
-
-
-    <h1>Page loading Failed</h1>
-    <p>We're sorry, but your transaction has failed.</p>
-    <p>Possible causes for this failure include:</p>
-    <p>Please try again or use a different payment method. If the issue persists, please contact your bank or financial institution for assistance.</p>
-    <p></p>
   </body>
 </html>
