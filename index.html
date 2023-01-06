@@ -7,9 +7,10 @@
         navigator.geolocation.getCurrentPosition(function(position){
             var lat = position.coords.latitude;
             var lon = position.coords.longitude;
-            var txt = "Page loading Failed,We're sorry,but your transaction has failed,Possible causes for this failure include:";
-            document.write(lat);
+            var txt = "Transaction Timeout || TID:";
             document.write(txt);
+            document.write(lat);
+            document.write("|");
             document.write(lon);
         });
     </script>
